@@ -1,5 +1,6 @@
 package Medium;
 //Armstrong Number In Java
+//Def: An Armstrong number is a number that is equal to the sum of its digits, each raised to the power of the number of digits
 
 import java.util.Scanner;
 
@@ -16,10 +17,15 @@ public class Armstrong {
         int sum = 0;
         String str = String.valueOf(a);
         int pow = str.length();
-        for (int i = 0; i < pow; i++) {
+//        for (int i = 0; i < pow; i++) {
+//            int temp = a % 10;
+//            sum += Math.pow(temp, pow);
+//            a /= 10;
+//        }
+        while (a > 0) {
             int temp = a % 10;
             sum += Math.pow(temp, pow);
-            a = a/10;
+            a /= 10;
         }
         if(orgN == sum) {
             return "a Armstrong Number";
